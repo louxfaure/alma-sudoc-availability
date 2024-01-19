@@ -1,0 +1,26 @@
+{
+   "id": "alma-sudoc-availability",
+   "title": "Disponibilité dans le SUDOc",
+   "description": "Affiche la disponibilité du titre dans le SUDOc pour les bibliothèques de votre ILN",
+   "subtitle": "Affiche la disponibilité du titre dans le SUDOc pour les bibliothèques de votre ILN",
+   "author": "LouxFaure",
+   "icon": {
+      "type": "url",
+      "value": "/assets/logo-sudoc.png"
+   },
+   "contentSecurity": {
+      "sandbox": {
+         "popups": true
+      },
+      "connectSrc": [
+         "https://www.sudoc.fr/"
+      ]
+   },
+   "pages": {
+      "help": "/#/help",
+      "config": "/#/config"
+   },
+   "entities": [
+      "BIB_MMS"
+   ]
+}

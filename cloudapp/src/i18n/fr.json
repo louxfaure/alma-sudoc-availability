@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "Intro": "Choisissez un service",
+    "NoSudocRecord": "Pas de correspondance dans le SUDOC.",
+    "NoRecords": "Pour connaitre la disponibilité de vos titres dans le SUDOC, réaliser d'abord une recherche de titres physiques ou electroniques.",
+    "LinkToSudoc" : "Voir la notice dans le SUDOC"
+  },
+
+  "SynchroSudoc": {
+    "Intro": "Analyse de synchronisation dans le SUDOC",
+    "Titre": "Analyse de synchronisation dans le SUDOC pour l'ILN ",
+    "Descr": "Indique, pour chaque titre de la liste des résultats de recherche, si la date de modification de la notice dans Alma est bien supérieure à la date de modification de la notice dans le SUDOC et affiche toutes les localisations pour l'ILN déclaré dans les paramètres de configuration.",
+    "UpToDate" : "À jour",
+    "NotUpToDate" : "Pas à jour"
+  },
+
+  "Nblocsudoc":{
+    "Intro" : "Nombre de localisation dans le SUDOC",
+    "Descr" : "Indique le nombre d'établissements du SUDOC localisés sous chaque titre de la liste des résultats de recherche."
+  },
+
+  "Help": {
+    "Text": "For more help with this app, or to report a problem, please open an issue by clicking on the link below.",
+    "Back": "Retour",
+    "Open": "Signaler un incident"
+  }
+}

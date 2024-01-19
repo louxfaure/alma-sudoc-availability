@@ -1,0 +1,27 @@
+<div class="loading-shade" *ngIf="loading">
+  <mat-progress-spinner 
+    mode="indeterminate"
+    diameter="50"
+    >
+  </mat-progress-spinner>
+</div>
+<h1 translate>Main.Intro</h1>
+<mat-list>
+  <mat-list-item>
+    <mat-card>
+      <mat-card-header translate>SynchroSudoc.Intro</mat-card-header>
+      <mat-card-content translate>SynchroSudoc.Descr</mat-card-content>
+      <mat-card-footer layout-align="end"><button mat-stroked-button color="primary" [routerLink]="['synchrosudoc']">Go</button></mat-card-footer>
+    </mat-card>
+  </mat-list-item>
+  <mat-list-item>
+    <mat-card>
+      <mat-card-header translate>Nblocsudoc.Intro</mat-card-header>
+      <mat-card-content translate>Nblocsudoc.Descr</mat-card-content>
+      <mat-card-footer layout-align="end"><button mat-stroked-button color="primary" [routerLink]="['nblocsudoc']">Go</button></mat-card-footer>
+    </mat-card>
+  </mat-list-item>
+</mat-list>
+
+
+

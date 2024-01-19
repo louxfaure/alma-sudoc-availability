@@ -1,0 +1,25 @@
+{
+  "Main": {
+    "Intro": "Availability of the displayed records in SUDOC for the ILN ",
+    "NoSudocRecord": "No SUDOC record found.",
+    "NoRecords": "To check for SUDOC availability, navigate to bibliographic records.",
+    "LinkToSudoc" : "See the SUDOC record"
+
+  },
+  "SynchroSudoc": {
+    "Intro": "Synchronization analysis",
+    "Titre": "Synchronization analysis for ILN ",
+    "Descr": "Indicates, for each title in the list of search results, whether the modification date of the record in Alma is greater than the modification date of the record in the SUDOC and displays all locations for the ILN declared in the configuration parameters.",
+    "UpToDate" : "Up to date",
+    "NotUpToDate" : "Not up to date"
+  },
+  "Nblocsudoc":{
+    "Intro" : "Number of locations in SUDOC",
+    "Descr" : "Indicates the number of SUDOC establishments located under each title in the list of search results."
+  },
+  "Help": {
+    "Text": "For more help with this app, or to report a problem, please open an issue by clicking on the link below.",
+    "Back": "Back",
+    "Open": "Open an issue"
+  }
+}

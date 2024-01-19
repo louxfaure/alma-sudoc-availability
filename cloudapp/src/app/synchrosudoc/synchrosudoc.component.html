@@ -1,0 +1,51 @@
+<div class="loading-shade" *ngIf="loading">
+    <mat-progress-spinner 
+      mode="indeterminate"
+      diameter="50"
+      >
+    </mat-progress-spinner>
+  </div>
+  
+  <div class="help"><a [routerLink]="['help']" title="Help"><mat-icon>help</mat-icon></a></div>
+  
+  <div class="back">
+    <button mat-raised-button color="secondary" [routerLink]="['']"><mat-icon>arrow_back</mat-icon>Back</button>
+  </div>
+  
+  <h1>{{'SynchroSudoc.Titre'|translate}} {{iln}}</h1>
+  
+  <div *ngIf="bibs.length>0 else nobibs">
+    <mat-list>
+      <ng-container *ngFor="let bib of bibs; index as i">
+        <mat-list-item>
+          <h3 matLine>{{i+1}}. {{bib.description || bib.id}}</h3>
+          <p matLine >
+            <span class="with-icon" *ngIf="bib.sudoc?.isUpToDate">
+              <mat-icon class="green">check_circle</mat-icon> {{ 'SynchroSudoc.UpToDate' | translate }}
+            </span>
+            <span class="with-icon" *ngIf="bib.sudoc && !bib.sudoc?.isUpToDate">
+              <mat-icon class="red">highlight_off</mat-icon> {{ 'SynchroSudoc.NotUpToDate' | translate }}
+            </span>
+            <mat-list *ngIf="bib.sudoc">
+                  <mat-list-item *ngFor="let loc of bib.sudoc.locations">
+                    <p matline >{{ loc.shortname }}</p>
+                  </mat-list-item>
+            </mat-list> 
+          </p>
+          <p matLine *ngIf="bib.sudoc?.ppn">
+            <a mat-stroked-button [href]="bib.sudoc.url" target="_blank" translate>{{ 'Main.LinkToSudoc'| translate }}({{bib.sudoc.ppn}})</a>
+          </p>
+          
+          <p matLine *ngIf="!bib.sudoc">
+            <span class="not-available" translate><mat-icon class="red">highlight_off</mat-icon>Main.NoSudocRecord</span>
+          </p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-list>
+
+  </div>
+  <ng-template #nobibs>      
+      <p translate>Main.NoRecords</p>
+  </ng-template>
+    

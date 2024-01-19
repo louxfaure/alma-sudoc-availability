@@ -1,0 +1,29 @@
+
+@import './app/main/main.component.theme';
+
+@mixin themed-styles($theme, $typography) {
+    /* Include themed component mixins or theme dependent styles here */
+    @include main-component-theme($theme, $typography);
+    h1 {
+      background-color: mat-color(map-get($theme, primary)) !important;
+      color: mat-color(map-get($theme, primary), default-contrast) !important;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+}
+
+@mixin global-styles {
+    /* Add global styles here */
+
+    body {
+        margin-top: 10px!important;
+      }
+    .help {
+        float: right;
+      }
+      h3 {
+        font-weight: bold!important;
+      }
+    
+}
